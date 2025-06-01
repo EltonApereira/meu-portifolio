@@ -2,32 +2,107 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portifolio</title>
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilo dos vagalumes */
+        .fireflies-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .firefly {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: #00ffcc;
+            border-radius: 50%;
+            opacity: 0.6;
+            box-shadow: 0 0 8px #00ffcc;
+            animation: fly linear infinite;
+        }
+
+        @keyframes fly {
+            0% {
+                transform: translate(0, 0) scale(1);
+                opacity: 0.4;
+            }
+
+            50% {
+                transform: translate(300px, -300px) scale(1.5);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(-200px, 200px) scale(1);
+                opacity: 0.4;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <header></header>
+    <!-- Fundo com vagalumes -->
+    <div class="fireflies-container" id="fireflies"></div>
+
+    <header>
+        <div class="links">
+            <a href="index.html">Home</a> <!-- Link para a página inicial -->
+            <a href="lançamento.html">Lançamento</a> <!-- Link para a página de lançamento -->
+            <a href="contato.html">Contato</a> <!-- Link para a página de contato -->
+        </div>
+    </header>
+
     <main class="apresentacao">
         <section class="apresentacao__conteudo">
-            <h1 class="apresentacao__conteudo__titulo">Eleve seu negócio digital a outro nível <strong
-                    class="titulo-destaque"> com um Front-end de
-                    qualidade!</strong></h1>
-            <p class="apresentacao__coteudo__texto">Olá! Sou Elton Pereira, desenvolvedor Front-end com especialidade em
-                React, HTML, CSS e JavaScript. Ajudo
-                pequenos negócios e designers a colocarem em prática boas ideias. Vamos conversar ?</p>
+            <h1 class="apresentacao__conteudo__titulo">
+                Eleve seu negócio digital a outro nível
+                <strong class="titulo-destaque"> com um Front-end de qualidade!</strong>
+
+            </h1>
+            <p class="apresentacao__conteudo__texto">
+                Olá! Sou Elton Pereira, desenvolvedor Front-end com especialidade em React, HTML, CSS e JavaScript.
+                Ajudo
+                pequenos negócios e designers a colocarem em prática boas ideias.
+                Combinamos criatividade, inteligência artificial e estratégia para criar soluções visuais impactantes e
+                altamente funcionais.
+                Desenvolvo identidades visuais robustas, edito vídeos com foco em performance, crio aplicações web
+                eficientes e entrego designs que otimizam a experiência do usuário.
+                Minha missão é proporcionar soluções digitais avançadas para empresas, criadores e empreendedores em
+                crescimento, sempre alinhadas às necessidades do mercado e focadas em resultados.
+                Cada projeto é executado com precisão, eficiência e inovação, garantindo a entrega de soluções de alto
+                impacto e performance. Vamos conversar?
+            </p>
+
             <div class="apresentacao__links">
-                <a class="apresentacao__links__link" href="https://web.whatsapp.com/">Instagram</a>
-                <a class="apresentacao__links__link" href="https://github.com/">GitHub</a>
+                <a class="apresentacao__links__link" href="https://github.com/EltonApereira">GitHub</a>
+                <a class="apresentacao__links__link"
+                    href="https://www.instagram.com/criativosfull?igsh=M25namUyeXc3d2Rj">Instagram</a>
+                <a class="apresentacao__links__link" href="">whatsapp</a>
             </div>
+
         </section>
 
-        <img src="img/logo.jpeg" width="500" height="550" alt="">
-
+        <img src="img/logo.jpeg" width="500" height="550" alt="" />
+        
     </main>
-    <footer></footer>
+
+    <footer class="rodape">
+        <!-- <p id="cop">&copy; 2025 Cri-Ativos. Todos os direitos reservados.</p> -->
+
+
+    </footer>
+
+    <!-- JS externo -->
+    <script src="fireflies.js"></script>
 </body>
 
 </html>

@@ -5,17 +5,44 @@
     padding: 0;
 }
 
-
 body {
-
-    height: 100vh;
+    height: 1vh;
     box-sizing: border-box;
     background-color: black;
     color: rgb(255, 255, 255);
 }
 
+header {
+    background: linear-gradient(45deg,#EDDD53,#36A130,#2A7B9B,#ffffff); /* Gradiente invertido no hover */
+    padding: 20px 5%; /* Espaçamento interno */
+}
+
+.links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px; /* espaço entre os links */
+}
+
+/* Estilo dos links */
+.links a {
+    text-decoration:none;
+    color: #000000;
+    font-weight:500px;
+    font-size: 20px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+.links a:hover {
+  color: #d6b048; /* Dourado */
+  text-shadow: 0 0 8px #d6b048;
+}
+
 .titulo-destaque {
-    color: #68f033d4;
+    background: linear-gradient(80deg, #d6b048, #1cab24, #d6b048); /* Gradiente de verde para amarelo */
+    -webkit-background-clip: text; /* Necessário para que o gradiente seja aplicado ao texto */
+    background-clip: text; /* Para navegadores modernos */
+    color: transparent; 
 }
 
 .apresentacao {
@@ -29,38 +56,47 @@ body {
     display: flex;
     justify-content: space-between;
 }
-
 .apresentacao__links__link {
-
-    background-color: rgba(229, 242, 44, 0.764);
+    background: linear-gradient(45deg,  #000000,#1cab24, #d6b048,  #1cab24, #000000); /* Gradiente de verde para amarelo */
     width: 180px;
     text-align: center;
     border-radius: 16px;
     font-size: 24px;
     padding: 5px;
     padding-right: px;
-
-
     text-decoration: none;
     color: rgb(0, 0, 0);
 
-
 }
+
+.apresentacao__links__link:hover {
+    background: linear-gradient(45deg, #000000, #03bb09, #ffffff,#1cab24, #000000); /* Gradiente invertido no hover */
+    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.7); /* Efeito de luz (brilho) */
+}
+
 
 .apresentacao__conteudo {
     width: 630px;
     display: flex;
     flex-direction: column;
     gap: 30px;
-
+    color: #1cab24;
 }
 
 .apresentacao__conteudo__titulo {
+    
     font-size: 30px;
-    font-family: font-family: font-family: "Krona One", sans-serif;
+    font-family: "Krona One", sans-serif; /* Corrigido a duplicação do font-family */
 }
 
-.apresentacao__coteudo__texto {
+.apresentacao__conteudo__texto { /* Corrigido o nome da classe de "coteudo" para "conteudo" */
     font-size: 20px;
-    font-family: 'montserrat', sans-serif;
+    
 }
+
+.rodape {
+    text-align: center;
+    margin-block: ;
+}
+
+

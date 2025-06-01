@@ -1,0 +1,24 @@
+/* Remove margens e paddings padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Remove decoração padrão de links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove estilo de listas */
+ul, ol {
+  list-style: none;
+}
+
+/* Remove bordas e estilos de formulários */
+input, textarea, button {
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
